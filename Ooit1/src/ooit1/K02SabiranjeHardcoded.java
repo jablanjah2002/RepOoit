@@ -1,6 +1,6 @@
 package ooit1;
 
-public class Klasa1 {
+public class K02SabiranjeHardcoded {
 
 	public static void main(String[] args) {
 		int prviBroj = 2;

@@ -1,14 +1,13 @@
-package rekapitulacija;
+package oblici;
 
 public class KrugSaRupom extends Krug {
 
 	public Krug rupa;
 	
-	public double pov() {
-		double p1 = super.pov();
-		return p1 - rupa.pov();
+	public double getPovrsina() {
+		return super.getPovrsina() - rupa.getPovrsina();
 	}
-	
+/*	
 	public static void main(String[] args) {
 		Krug k1 = new Krug();
 		k1.r = 10;
@@ -18,5 +17,5 @@ public class KrugSaRupom extends Krug {
 		k2.r = 12;
 		k2.rupa = k1;
 		System.out.println(k2.pov());
-	}
+	}*/
 }

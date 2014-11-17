@@ -32,5 +32,9 @@ public class Krug {
 			rez = true;
 		return rez;
 	}
+	
+	public double getPovrsina() {
+		return Math.PI*poluprecnik*poluprecnik;
+	}
 
 }

@@ -2,6 +2,10 @@ package oblici;
 
 public class KrugSaRupom extends Krug {
 
+	public KrugSaRupom(int p, Tacka c) {
+		super(p, c);
+	}
+
 	public Krug rupa;
 	
 	public double getPovrsina() {

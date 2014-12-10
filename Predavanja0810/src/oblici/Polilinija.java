@@ -3,6 +3,16 @@ package oblici;
 public class Polilinija {
 	private Linija[] segmenti = new Linija[10];
 
+	public static void main(String[] args) {
+		Linija ll1 = new Linija(new Tacka(5,5), new Tacka(3, 3));
+		Linija ll2 = new Linija(new Tacka(3,3), new Tacka(6, 6));
+		Polilinija pll = new Polilinija(new Linija[]{ll1, ll2});
+		Linija l1 = new Linija(new Tacka(5,2), new Tacka(3, 6));
+		pll.dodajSegment(l1);
+		Linija l2 = new Linija(new Tacka(3,6), new Tacka(6, 6));
+		pll.dodajSegment(l2);	
+	}
+	
 	public Linija[] getSegmenti() {
 		return segmenti;
 	}

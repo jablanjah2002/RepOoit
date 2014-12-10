@@ -1,10 +1,22 @@
 package oblici;
 
-public class Krug {
+public class Krug implements Sadrzilac {
+	
+	
 	private int poluprecnik;
 	private Tacka centar;
 	
-
+	public Krug(int p, Tacka c) {
+		poluprecnik = p;
+		centar = c;
+	}
+	
+	public String toString(){
+		//return "r="+poluprecnik+" ("+centar.getX()+","+centar.getY()+")";
+		//return "r="+poluprecnik+" "+centar.toString();		
+		return "r="+poluprecnik+", centar="+centar;
+	}
+	
 	public int getPoluprecnik() {
 		return poluprecnik;
 	}

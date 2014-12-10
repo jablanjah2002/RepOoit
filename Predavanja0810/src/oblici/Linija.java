@@ -22,5 +22,9 @@ public class Linija {
 		return pocetna.udaljenost(krajnja);
 	}
 	
+	public Linija(Tacka p, Tacka k) {
+		pocetna = p;
+		krajnja = k;
+	}
 
 }

@@ -1,11 +1,21 @@
 package oblici;
 
-public class Pravougaonik {
+public class Pravougaonik implements Sadrzilac {
 
 	private int sirina;
 	private int duzina;
 	private Tacka gornjaLeva;
 	private boolean selektovan;
+	
+	public Pravougaonik(int s, int d, Tacka gl) {
+		sirina = s;
+		duzina = d;
+		gornjaLeva = gl;
+	}
+
+	public String toString(){
+		return "s=" + sirina + ", d="+duzina+ ", gl=" + gornjaLeva; 
+	}
 	
 	public boolean sadrzi(int x, int y){
 		boolean rez = false;
@@ -55,6 +65,14 @@ public class Pravougaonik {
 
 	public void setGornjaLeva(Tacka gornjaLeva) {
 		this.gornjaLeva = gornjaLeva;
+	}
+
+	public boolean sadrzi(Tacka mestoKlika) {
+		if (mestoKlika.getX() > gornjaLeva.getX() && mestoKlika.getX() < (gornjaLeva.getX()+sirina)
+				&& mestoKlika.getY() > gornjaLeva.getY() && mestoKlika.getY() < (gornjaLeva.getY()+duzina))
+			return true;
+		else
+			return false;
 	}
 
 	
